@@ -42,12 +42,12 @@
 
             <!-- EMAIL/CPF -->
             <div class="space-y-2">
-                <label class="text-sm font-bold text-gray-700 ml-1">Email ou CPF</label>
+                <label class="text-sm font-bold text-gray-700 ml-1">Email</label>
                 <div class="relative group">
                     <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-gray-400">
                         <i class="fas fa-id-card"></i>
                     </span>
-                    <input id="usuario" type="text" placeholder="Digite seu Email ou CPF" 
+                    <input id="usuario" type="text" placeholder="Digite seu Email" 
                         class="w-full pl-11 pr-4 py-4 bg-gray-50 border border-gray-100 rounded-2xl
                         focus:ring-2 focus:ring-red-600 focus:bg-white outline-none transition-all" required>
                 </div>
@@ -103,7 +103,7 @@
 
             // Validação
             if (!ehEmail && !ehCpf) {
-                mostrarFeedback("Por favor, insira um email ou CPF válido.", "bg-red-200 text-red-700");
+                mostrarFeedback("Por favor, insira um email válido.", "bg-red-200 text-red-700");
                 return;
             }
 
