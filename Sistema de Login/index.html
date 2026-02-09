@@ -23,7 +23,6 @@
 
     <div class="glass-effect w-full max-w-md p-10 rounded-[2rem] shadow-2xl transition-transform duration-300">
         
-        <!-- LOGO -->
         <div class="text-center mb-10">
             <div class="bg-red-800 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
                 <i class="fas fa-university text-white text-3xl"></i>
@@ -33,14 +32,11 @@
             </h1>
             <p class="text-gray-400 mt-2 font-medium">Acesse sua conta bancária com segurança</p>
         </div>
-
-        <!-- FEEDBACK AO USUÁRIO -->
+        
         <div id="feedback" class="hidden mb-4 p-4 rounded-xl text-sm font-semibold"></div>
 
-        <!-- FORMULÁRIO -->
         <form id="loginForm" class="space-y-6">
 
-            <!-- EMAIL/CPF -->
             <div class="space-y-2">
                 <label class="text-sm font-bold text-gray-700 ml-1">Email</label>
                 <div class="relative group">
@@ -53,7 +49,6 @@
                 </div>
             </div>
 
-            <!-- SENHA -->
             <div class="space-y-2">
                 <label class="text-sm font-bold text-gray-700 ml-1">Senha Numérica</label>
                 <div class="relative group">
@@ -66,14 +61,12 @@
                 </div>
             </div>
 
-            <!-- BOTÃO -->
             <button type="submit" 
                 class="w-full bg-red-800 text-white font-bold py-4 rounded-2xl shadow-lg hover:bg-red-600 active:scale-[0.98] transition-all text-lg mt-4">
                 Entrar no IG Bank
             </button>
         </form>
 
-        <!-- INFO DE SEGURANÇA -->
         <div class="mt-10 flex flex-col items-center space-y-4">
             <div class="flex items-center space-x-2 text-xs text-slate-400 uppercase tracking-widest font-bold">
                 <i class="fas fa-lock"></i>
@@ -82,7 +75,6 @@
         </div>
     </div>
 
-    <!-- SCRIPT: VALIDAÇÃO LOCAL -->
     <script>
         const form = document.getElementById("loginForm");
         const feedback = document.getElementById("feedback");
@@ -97,12 +89,11 @@
             const usuario = document.getElementById("usuario").value.trim();
             const senha = document.getElementById("senha").value.trim();
 
-            // Regras para CPF ou Email
+            // Regras para Email
             const ehEmail = usuario.includes("@");
-            const ehCpf = usuario.length === 11 && !isNaN(usuario);
 
             // Validação
-            if (!ehEmail && !ehCpf) {
+            if (!ehEmail) {
                 mostrarFeedback("Por favor, insira um email válido.", "bg-red-200 text-red-700");
                 return;
             }
@@ -133,3 +124,4 @@
 
 </body>
 </html>
+
