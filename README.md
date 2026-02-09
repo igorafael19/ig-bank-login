@@ -13,7 +13,7 @@ Interface moderna e responsiva
 
 Design esteticamente agradável
 
-Validação local de e-mail/CPF e senha
+Validação local de e-mail e senha
 
 Feedback visual e textual imediato
 
